@@ -67,8 +67,8 @@ var editTask = function() {
   console.log("Edit Task...");
   console.log("Change 'edit' to 'save'");
   var listItem = this.parentNode;
-  var editInput = listItem.querySelector(".center__input-text");
-  var label = listItem.querySelector(".center__task");
+  var editInput = listItem.querySelector("input[type=text]");
+  var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".edit");
   var containsClass = listItem.classList.contains(".center__item_editmode");
   //If class of the parent is .editmode
@@ -126,9 +126,9 @@ addButton.addEventListener("click", ajaxRequest);
 var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
   //select ListItems children
-  var checkBox = taskListItem.querySelector(".center__checkbox");
-  var editButton = taskListItem.querySelector(".button .edit");
-  var deleteButton = taskListItem.querySelector(".button .delete");
+  var checkBox = taskListItem.querySelector("input[type=checkbox]");
+  var editButton = taskListItem.querySelector(".edit");
+  var deleteButton = taskListItem.querySelector(".delete");
   //Bind editTask to edit button.
   editButton.onclick = editTask;
   //Bind deleteTask to delete button.
