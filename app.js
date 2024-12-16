@@ -121,10 +121,10 @@ var ajaxRequest = function() {
 
 //Set the click handler to the addTask function.
 addButton.onclick = addTask;
-addButton.addEventListener("click",addTask);
-addButton.addEventListener("click",ajaxRequest);
+addButton.addEventListener("click", addTask);
+addButton.addEventListener("click", ajaxRequest);
 
-var bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
+var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
   console.log("bind list item events");
   //select ListItems children
   var checkBox = taskListItem.querySelector(".center__checkbox");
