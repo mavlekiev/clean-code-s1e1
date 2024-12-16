@@ -85,6 +85,7 @@ var editTask = function() {
   listItem.classList.toggle("center__item_editmode");
 };
 
+
 //Delete task.
 var deleteTask = function() {
   console.log("Delete Task...");
